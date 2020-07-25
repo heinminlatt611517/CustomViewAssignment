@@ -47,15 +47,15 @@ class ProfileScreen : BaseActivity(),ProfileView {
     }
 
     override fun onTapshare() {
-        Toast.makeText(this,"Click Share",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Click Share",Toast.LENGTH_SHORT).show()
     }
 
     override fun onTapmessage() {
-        Toast.makeText(this,"Click Message",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Click Message",Toast.LENGTH_SHORT).show()
     }
 
     override fun onTapAssign() {
-        Toast.makeText(this,"Click Assign",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Click Assign",Toast.LENGTH_SHORT).show()
     }
 
     override fun showErrorMessage(message: String) {
