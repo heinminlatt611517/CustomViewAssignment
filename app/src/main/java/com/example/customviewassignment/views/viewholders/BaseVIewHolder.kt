@@ -15,7 +15,7 @@ abstract class BaseVIewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemV
         }
     }
 
-    abstract fun onItemClick(data: T)
+   abstract fun onItemClick(data: T)
 
 
     abstract fun bindData(data : T)
