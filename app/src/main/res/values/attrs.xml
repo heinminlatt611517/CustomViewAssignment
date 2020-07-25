@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressCircle">
+        <attr name="indeterminate" format="boolean" />
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="progressBackgroundColor" format="color" />
+        <attr name="progressAccentColor" format="color" />
+        <attr name="indeterminateProgressAccentColor" format="color" />
+        <attr name="indeterminatePeriod" format="integer" />
+        <attr name="indeterminateArcSize" format="float" />
+    </declare-styleable>
+</resources>
