@@ -28,9 +28,10 @@ class MainActivity : BaseActivity() , MainView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //timeOutRemoveTimer.start()
-        circle_progress.progress = 0.8f
+
 
         setUpPresenter()
+        setUpProgressBar()
         setUpTaskRecyclerView()
         setUpProfileRecyclerView()
 
@@ -55,22 +56,29 @@ class MainActivity : BaseActivity() , MainView{
 
     }
 
+    private fun setUpProgressBar()
+    {
+        circle_progress.setProgressColor(getResources().getColor(R.color.colorPrimary));
+        circle_progress.setProgressWidth(10)
+        circle_progress.setProgress(75)
+    }
+
     private fun setUpPresenter() {
         mPresenter=ViewModelProviders.of(this).get(MainPresenterImpls::class.java)
         mPresenter.initPresenter(this)
 
     }
 
-    private var timeOutRemoveTimer = object : CountDownTimer(TOTAL_TIME, 8) {
-        override fun onFinish() {
-            circle_progress.progress = 0.8f
-
-        }
-
-        override fun onTick(millisUntilFinished: Long) {
-            circle_progress.progress = (TOTAL_TIME - millisUntilFinished).toFloat() / TOTAL_TIME
-        }
-    }
+//    private var timeOutRemoveTimer = object : CountDownTimer(TOTAL_TIME, 8) {
+//        override fun onFinish() {
+//            circle_progress.progress = 0.8f
+//
+//        }
+//
+//        override fun onTick(millisUntilFinished: Long) {
+//            circle_progress.progress = (TOTAL_TIME - millisUntilFinished).toFloat() / TOTAL_TIME
+//        }
+//    }
 
     override fun showTaskList() {
         mTaskAdapter.setNewData(mutableListOf(1,2,3,4,5))

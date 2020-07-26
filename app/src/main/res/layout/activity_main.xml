@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".activities.MainActivity">
 
     <LinearLayout
@@ -80,7 +81,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginLeft="16dp"
@@ -90,8 +91,8 @@
     <com.example.customviewassignment.views.components.ProgressCircle
         android:id="@+id/circle_progress"
         android:layout_width="50dp"
-        android:layout_height="100dp"
-        app:progressAccentColor="@color/colorPrimary"
+        android:layout_height="50dp"
+        app:progressAccentColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/rvProfile"
         android:layout_marginRight="12dp"

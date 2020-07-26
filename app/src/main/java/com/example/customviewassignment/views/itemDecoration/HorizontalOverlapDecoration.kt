@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 class HorizontalOverlapDecoration : RecyclerView.ItemDecoration() {
-    private val horzontalOverlapCount = -20
+    private val horzontalOverlapCount = -15
     override fun getItemOffsets(
         outRect: Rect,
         view: View,

@@ -56,11 +56,13 @@
     app:layout_constraintStart_toStartOf="@+id/tvClient"
     android:layout_margin="8dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <com.example.customviewassignment.views.components.RoundCornerImageVIew
         android:id="@+id/iv_client"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/ic_launcher"/>
+        app:border_color="@android:color/white"
+        app:border_width="2dp"
+        app:srcCompat="@drawable/profile"/>
 
     <Spinner
         android:id="@+id/spinner"
@@ -197,12 +199,11 @@
 
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         >
 
@@ -217,14 +218,47 @@
             app:layout_constraintStart_toStartOf="parent"/>
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <com.example.customviewassignment.views.components.RoundCornerImageVIew
             android:id="@+id/iv_attachment"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@mipmap/ic_launcher"
+            app:border_color="@android:color/white"
+            app:border_width="2dp"
+            app:srcCompat="@drawable/profile"
             app:layout_constraintStart_toStartOf="@+id/btnCreateTask"
             app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
             android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvReference"
+            android:text="Reference_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_attachment"
+            app:layout_constraintTop_toTopOf="@+id/iv_attachment"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:progress="80"
+            android:progressBackgroundTint="#ffffff"
+            android:progressTint="#009688"
+            app:layout_constraintStart_toStartOf="@+id/tvReference"
+            app:layout_constraintTop_toBottomOf="@id/tvReference"
+            app:layout_constraintEnd_toEndOf="@+id/etDescription"
+            />
+
+        <TextView
+            android:id="@+id/tvProgerssCount"
+            android:text="180 KB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar2"/>
 
         <ImageView
             android:id="@+id/ivCancle"
@@ -266,7 +300,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Task"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         app:layout_constraintTop_toBottomOf="@+id/tvAssignee"

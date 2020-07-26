@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".activities.ProfileScreen">
 
 
@@ -77,10 +78,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/materialCardView2">
-            <ImageView
+            <com.example.customviewassignment.views.components.RoundCornerImageVIew
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:elevation="1dp"
+                android:scaleType="centerCrop"
+                app:border_color="@android:color/white"
+                app:border_width="2dp"
+                app:srcCompat="@drawable/profile" />
 <!--            <androidx.cardview.widget.CardView-->
 <!--                android:layout_width="20dp"-->
 <!--                android:layout_height="20dp"-->
